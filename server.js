@@ -10,7 +10,7 @@ app.use(cors());
 const PORT = process.env.PORT || 10000;
 
 // Fixed receiver email
-const FIXED_EMAIL = "tstshbhmkrn@gmail.com";
+const FIXED_EMAIL = "shbhmkrn@gmail.com";
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
