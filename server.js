@@ -26,9 +26,10 @@ app.post("/send-otp", async (req, res) => {
     });
 
     res.json({ message: "OTP sent successfully" });
-  } catch (error) {
-    res.status(500).json({ error: "Error sending OTP" });
-  }
+  }catch (error) {
+  console.error("SMTP ERROR:", error);
+  res.status(500).json({ error: error.message });
+}
 });
 
 app.listen(3000, () => console.log("Server running"));
